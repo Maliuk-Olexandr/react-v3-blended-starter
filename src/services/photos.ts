@@ -1,14 +1,37 @@
-import axios from "axios";
+import axios from 'axios';
+import type { Photo } from '../types/photo';
 
-const API_KEY = "563492ad6f9170000100000108dc2880626e4436b3634ce1cf6b4d74";
-axios.defaults.baseURL = "https://api.pexels.com/v1/";
-axios.defaults.headers.common["Authorization"] = API_KEY;
-axios.defaults.params = {
-  orientation: "landscape",
-};
+const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
 
-export const getPhotos = async (query) => {
-  const response = await axios.get(`search?query=${query}`);
+const instance = axios.create({
+  baseURL: 'https://api.pexels.com/v1/',
+  headers: {
+    Authorization: API_KEY,
+  },
+  params: {
+    orientation: 'landscape',
+  },
+});
 
+interface PhotosResponse {
+  photos: Photo[];
+}
+
+export default async function getPhotos(query: string): Promise<Photo[]> {
+
+  if (!API_KEY) {
+    console.warn('⚠️  Pexels API key is missing');
+    return [];
+  }
+  try {
+  const response = await instance.get<PhotosResponse>('search', {
+    params: {
+      query,
+    },
+  });
   return response.data.photos;
-};
+} catch (error) {
+  console.error('Error fetching photos:', error);
+  return [];
+}
+}
