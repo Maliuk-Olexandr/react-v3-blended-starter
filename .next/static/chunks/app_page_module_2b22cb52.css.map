@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/oleksandr/projects/react-v3-blended-starter/app/page.module.css"],"sourcesContent":[".main {\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: flex-start;\n  flex: 1 0 0;\n}\n\n.container {\n  display: flex;\n  width: 700px;\n  padding: 40px 0px 80px 80px;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 40px;\n  flex: 1 0 0;\n}\n\n.title {\n  color: #fff;\n  font-family: Knewave;\n  font-size: 64px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: normal;\n}\n\n.description {\n  color: #fff;\n  font-family: 'Open Sans';\n  font-size: 18px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: normal;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;;;;;AAUA;;;;;;;;;AASA","debugId":null}}]
+}

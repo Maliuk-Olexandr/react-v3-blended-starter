@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/globals.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Open+Sans&display=swap');\n\nbody {\n  font-family: 'Montserrat', sans-serif;\n}\n\nbody {\n  font-family: 'Open Sans', sans-serif;\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n  margin: 0;\n  background-image: url('/Home.png');\n  background-size: cover;\n  background-position: center;\n  width: 100%;\n}\n\nh1,\nh2,\nh3,\np {\n  margin: 0;\n}\n\na {\n  text-decoration: none;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n"],"names":[],"mappings":"AAEA;;;;;;;;;;;;AAgBA;;;;AAOA;;;;AAIA"}}]
+}
